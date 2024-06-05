@@ -17,6 +17,10 @@ app.use(cors());
 
 app.use("/api/v1/auth", authRouter);
 
+app.use("/", (req, res) => {
+    res.send('Hello World!');
+});
+
 app.use(notFound);
 const port = process.env.PORT || 5000;
 
